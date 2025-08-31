@@ -82,6 +82,12 @@ install_utils() {
 	echo "Installing fzf from git..."
 	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 	~/.fzf/install
+
+	add_breaks
+	echo "Installing bat - cat with wings..."
+	sudo apt install bat
+	mkdir -p $HOME/.local/bin
+	ln -s /usr/bin/batcat $HOME/.local/bin/bat
 }
 
 install_all() {
