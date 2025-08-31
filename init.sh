@@ -61,6 +61,9 @@ install_fish() {
 		echo "Installing lts version of Node..."
 		nvm install lts
 		nvm use lts
+
+		echo "Installing forgit tui..."
+		fisher install wfxr/forgit
 END_FISH
 
 
