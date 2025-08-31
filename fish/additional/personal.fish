@@ -14,6 +14,12 @@ if test -f /home/jekiquin/anaconda3/bin/conda
 end
 # <<< conda initialize <<<
 
+zoxide init fish | source
+
+export FORGIT_COPY_CMD='xclip -selection clipboard'
+
+set --universal nvm_default_version lts
+
 # this is to automatically switch node versions
 function cd
   echo "$is_nvmrc_path"
@@ -25,6 +31,3 @@ function cd
   end
 end
 
-zoxide init fish | source
-
-export FORGIT_COPY_CMD='xclip -selection clipboard'
