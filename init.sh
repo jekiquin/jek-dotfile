@@ -45,7 +45,7 @@ install_fish() {
 		mkdir "${fish_config_path}"
 	fi
 	ln -s "${fish_original_path}/config.fish" "${fish_config_path}/config.fish"	
-	ln -s "${fish_original_path}/additional/" "${fish_config_path}/additional/"	
+	ln -s "${fish_original_path}/additional" "${fish_config_path}/additional"	
 
 	add_breaks
 	echo "Installing fish utils..."
