@@ -1,5 +1,4 @@
-echo "What's up, Doc?!"
-
+source ~/.config/fish/additional/welcome.fish
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
