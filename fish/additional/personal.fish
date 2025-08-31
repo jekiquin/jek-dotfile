@@ -1,5 +1,5 @@
 # adding nvim to path
-export PATH="/opt/nvim-linux64/bin:$PATH"
+export PATH="/opt/nvim-linux-x86_64/bin:$PATH"
 
 # adding fd and bat to path via symlink
 export PATH="$HOME/.local/bin:$PATH"

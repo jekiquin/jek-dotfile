@@ -91,7 +91,10 @@ install_utils() {
 
 	add_breaks
 	echo "Installing neovim..."
-	sudo apt install neovim -y
+	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+	sudo rm -rf /opt/nvim
+	sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz	
+	ln -s "${CWD}/nvim-lazy" "${HOME}/.config/nvim-lazy"
 }
 
 install_all() {
