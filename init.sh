@@ -103,11 +103,15 @@ install_all() {
 # --------------- Optionals ---------------
 install_go() {
   add_border
+  # jektodo: maybe need to make this default but have a user defined value
+  local golang="go1.25.0.linux-amd64.tar.gz"
   echo "Installing optional: Golang..."
   echo "Removing any existing go installation..."
   sudo rm -rf /usr/local/go
+  echo "Downloading go1.25.0..."
+  curl -OL "https://golang.org/dl/${golang}"
   echo "Extracting tar from golang folder..."
-  sudo tar -C /usr/local -xzf "${CWD}/golang/go1.25.0.linux-amd64.tar.gz"
+  sudo tar -C /usr/local -xzf "${CWD}/go1.25.0.linux-amd64.tar.gz"
 }
 
 
