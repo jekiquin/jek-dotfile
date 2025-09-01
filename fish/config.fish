@@ -4,5 +4,6 @@ if status is-interactive
 end
 
 source ~/.config/fish/additional/personal.fish
+source ~/.config/fish/additional/optional.fish
 source ~/.config/fish/additional/keymaps.fish
 source ~/.config/fish/additional/shortcuts.fish

@@ -100,6 +100,16 @@ install_all() {
 	install_fish || echo "Something went wrong on your fish installation"
 }
 
+# --------------- Optionals ---------------
+install_go() {
+  add_border
+  echo "Installing optional: Golang..."
+  echo "Removing any existing go installation..."
+  sudo rm -rf /usr/local/go
+  echo "Extracting tar from golang folder..."
+  sudo tar -C /usr/local -xzf "${CWD}/golang/go1.25.0.linux-amd64.tar.gz"
+}
+
 
 case "$1" in
 	fish)
@@ -108,6 +118,9 @@ case "$1" in
 	utils)
 		install_utils
 		;;
+  go)
+    install_go
+    ;;
 	"")
 		echo "Installing all of them, you greedy bastard"
 		install_all
