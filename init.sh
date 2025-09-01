@@ -65,8 +65,6 @@ install_fish() {
 		echo "Installing forgit tui..."
 		fisher install wfxr/forgit
 END_FISH
-
-
 }
 
 install_utils() {

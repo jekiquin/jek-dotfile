@@ -46,12 +46,13 @@ Run the installation script:
 ### High Priority
 - [ ] **Install tmux** - Terminal multiplexer configuration and setup
 - [ ] **macOS Support** - Create init script for macOS (init-mac.sh)
-- [x] **Complete README** - Add more detailed usage instructions and troubleshooting
 
 ### Medium Priority  
 - [ ] **Terminal Emulator** - Wezterm installation and configuration (separate script)
 - [ ] **Git Configuration** - Add global git config setup
 - [ ] **SSH Configuration** - Add SSH key management and config
+- [ ] **Go** - Add Go installation
+- [ ] **Rust** - Add Rust installation
 
 ### Low Priority
 - [ ] **Dotfile Management** - Add dotfile update/sync mechanism
