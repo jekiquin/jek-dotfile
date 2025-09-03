@@ -19,6 +19,9 @@ This dotfiles repository provides automated installation and configuration for:
 - **Configuration Files**
   - Fish shell configurations
   - Neovim configurations (nvim-lazy)
+- **Optional Tools**
+  - Go programming language (go1.25.0)
+  - Claude CLI for AI assistance
 
 ## Usage
 
@@ -33,6 +36,8 @@ Run the installation script:
 # Install only specific components
 ./init.sh fish    # Install fish shell and plugins
 ./init.sh utils   # Install development utilities only
+./init.sh go      # Install Go programming language
+./init.sh claude  # Install Claude CLI
 ```
 
 ### What the Script Does
@@ -51,7 +56,6 @@ Run the installation script:
 - [ ] **Terminal Emulator** - Wezterm installation and configuration (separate script)
 - [ ] **Git Configuration** - Add global git config setup
 - [ ] **SSH Configuration** - Add SSH key management and config
-- [ ] **Go** - Add Go installation
 - [ ] **Rust** - Add Rust installation
 
 ### Low Priority

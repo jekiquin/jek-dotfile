@@ -155,6 +155,7 @@ add_claude() {
 	ln -sf "${CWD}/claude/commands" "${HOME}/.claude/commands"
 	echo "Claude commands symlink created successfully!"
 }
+# ----------------------------------------------
 
 
 case "$1" in
