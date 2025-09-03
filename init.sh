@@ -114,6 +114,48 @@ install_go() {
   sudo tar -C /usr/local -xzf "${CWD}/go1.25.0.linux-amd64.tar.gz"
 }
 
+add_claude() {
+	add_border
+	echo "Setting up Claude commands..."
+	
+	# Check if Claude is installed
+	if ! command -v claude &> /dev/null; then
+		echo "Claude not found. Installing Claude..."
+		add_breaks
+		
+		# Install Claude using npm
+		if command -v npm &> /dev/null; then
+			npm install -g @anthropic-ai/claude-cli
+		else
+			echo "Error: npm not found. Please install Node.js and npm first."
+			return 1
+		fi
+		
+		# Verify installation
+		if ! command -v claude &> /dev/null; then
+			echo "Error: Claude installation failed."
+			return 1
+		fi
+		
+		echo "Claude installed successfully!"
+	else
+		echo "Claude is already installed."
+	fi
+	
+	add_breaks
+	echo "Creating symlink for Claude commands..."
+	
+	# Create .claude directory if it doesn't exist
+	if [ ! -d "${HOME}/.claude" ]; then
+		echo "Creating .claude directory..."
+		mkdir -p "${HOME}/.claude"
+	fi
+	
+	# Create the symlink
+	ln -sf "${CWD}/claude/commands" "${HOME}/.claude/commands"
+	echo "Claude commands symlink created successfully!"
+}
+
 
 case "$1" in
 	fish)
@@ -124,6 +166,9 @@ case "$1" in
 		;;
   go)
     install_go
+    ;;
+  claude)
+    add_claude
     ;;
 	"")
 		echo "Installing all of them, you greedy bastard"
